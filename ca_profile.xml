@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Maintainer>
+    <Icon>https://raw.githubusercontent.com/ArabCoders/unraid-templates/master/arabcoders/images/profile.png</Icon>
+    <Profile>
+        Docker Images Maintainer.
+    </Profile>
+    <DonateLink>https://worldwish.org/</DonateLink>
+    <DonateText>If you appreciate my work, then please consider donating to children charity.</DonateText>
+</Maintainer>

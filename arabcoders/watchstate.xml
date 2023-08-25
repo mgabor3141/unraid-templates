@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+    <TemplateURL>https://raw.githubusercontent.com/ArabCoders/unraid-templates/master/arabcoders/watchstate.xml
+    </TemplateURL>
+    <Beta>False</Beta>
+    <Category>Tools:Utilities</Category>
+    <Name>ac-watchstate</Name>
+    <Description>
+        [b]Description[/b][br]
+        [u]WatchState[/u] is a self-hosted service to sync your plex, jellyfin and emby play state. without relying on
+        3rd-party external services.[br]
+        [b]Features[/b][br]
+        * Sync backends play state (from many to many).[br]
+        * Backup your backends play state into portable format.[br]
+        * Receive Webhook events from media backends.[br]
+        * Find un-matched or mis-matched items.[br]
+        * Search your backend for title or item id.[br]
+        * Display and filter your play state. Can be exported as yaml or json.[br]
+        [b]Configuration[/b][br]
+        [b]/config[/b] This is where the application will store its configuration files, database and logs etc.[br]
+        [b]Documentation[/b][br]
+        Each command has a help documentation attached to it.[br] For more info please visit[br]
+        https://github.com/ArabCoders/watchstate/blob/master/FAQ.md[br][br]
+    </Description>
+    <Overview>
+        Self-hosted service to sync your plex, jellyfin and emby play state. without relying on 3rd-party external
+        services.
+    </Overview>
+    <Support>https://github.com/ArabCoders/watchstate/discussions</Support>
+    <ReadMe>https://github.com/ArabCoders/watchstate/blob/master/README.md</ReadMe>
+    <Registry>https://github.com/ArabCoders/watchstate/pkgs/container/watchstate</Registry>
+    <GitHub>https://github.com/ArabCoders/watchstate</GitHub>
+    <Repository>ghcr.io/arabcoders/watchstate</Repository>
+    <Project>https://github.com/ArabCoders/watchstate</Project>
+    <BindTime>true</BindTime>
+    <Privileged>false</Privileged>
+    <Networking>
+        <Mode>bridge</Mode>
+        <Publish>
+            <Port>
+                <HostPort>8080</HostPort>
+                <ContainerPort>8080</ContainerPort>
+                <Protocol>tcp</Protocol>
+            </Port>
+        </Publish>
+    </Networking>
+    <Environment>
+        <Variable>
+            <Name>WS_TZ</Name>
+            <Value>UTC</Value>
+            <Description>Set Container Timezone</Description>
+        </Variable>
+        <Variable>
+            <Name>WS_CRON_IMPORT</Name>
+            <Value>0|1</Value>
+            <Description>Enable or disable The import task.</Description>
+            <Default>0</Default>
+        </Variable>
+        <Variable>
+            <Name>WS_CRON_EXPORT</Name>
+            <Value>0|1</Value>
+            <Description>Enable or disable The export task.</Description>
+            <Default>0</Default>
+        </Variable>
+          <Variable>
+            <Name>WS_LOGGER_FILE_ENABLE</Name>
+            <Value>0|1</Value>
+            <Description>Enable or disable log saving to files. Defaults to stdout.</Description>
+            <Default>0</Default>
+        </Variable>
+    </Environment>
+    <Data>
+        <Volume>
+            <HostDir>/mnt/user/appdata/watchstate</HostDir>
+            <ContainerDir>/config</ContainerDir>
+            <Mode>rw</Mode>
+        </Volume>
+    </Data>
+    <WebUI>http://[IP]:[PORT:8080]/</WebUI>
+    <Icon>https://raw.githubusercontent.com/ArabCoders/unraid-templates/master/arabcoders/images/watchstate.png</Icon>
+    <ExtraParams>--user 99:100</ExtraParams>
+    <DonateText>If you appreciate my work, then please consider donating to children charity.</DonateText>
+    <DonateLink>https://worldwish.org/</DonateLink>
+</Containers>

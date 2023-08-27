@@ -4,7 +4,7 @@
     </TemplateURL>
     <Beta>False</Beta>
     <Category>Tools:Utilities</Category>
-    <Name>ac-watchstate</Name>
+    <Name>WatchState</Name>
     <Description>
         [b]Description[/b][br]
         [u]WatchState[/u] is a self-hosted service to sync your plex, jellyfin and emby play state. without relying on
@@ -22,15 +22,11 @@
         Each command has a help documentation attached to it.[br] For more info please visit[br]
         https://github.com/ArabCoders/watchstate/blob/master/FAQ.md[br][br]
     </Description>
-    <Overview>
-        Self-hosted service to sync your plex, jellyfin and emby play state. without relying on 3rd-party external
-        services.
-    </Overview>
     <Support>https://github.com/ArabCoders/watchstate/discussions</Support>
     <ReadMe>https://github.com/ArabCoders/watchstate/blob/master/README.md</ReadMe>
-    <Registry>https://github.com/ArabCoders/watchstate/pkgs/container/watchstate</Registry>
     <GitHub>https://github.com/ArabCoders/watchstate</GitHub>
     <Repository>ghcr.io/arabcoders/watchstate</Repository>
+    <Registry>https://github.com/ArabCoders/watchstate/pkgs/container/watchstate</Registry>
     <Project>https://github.com/ArabCoders/watchstate</Project>
     <BindTime>true</BindTime>
     <Privileged>false</Privileged>
@@ -53,19 +49,19 @@
         <Variable>
             <Name>WS_CRON_IMPORT</Name>
             <Value>0|1</Value>
-            <Description>Enable or disable The import task.</Description>
+            <Description>Enable [1] or disable [0] The import task.</Description>
             <Default>0</Default>
         </Variable>
         <Variable>
             <Name>WS_CRON_EXPORT</Name>
             <Value>0|1</Value>
-            <Description>Enable or disable The export task.</Description>
+            <Description>Enable [1] or disable [0] The export task.</Description>
             <Default>0</Default>
         </Variable>
-          <Variable>
+        <Variable>
             <Name>WS_LOGGER_FILE_ENABLE</Name>
             <Value>0|1</Value>
-            <Description>Enable or disable log saving to files. Defaults to stdout.</Description>
+            <Description>Enable [1] or disable [0] log saving to files. Defaults to stdout.</Description>
             <Default>0</Default>
         </Variable>
     </Environment>
@@ -79,6 +75,4 @@
     <WebUI>http://[IP]:[PORT:8080]/</WebUI>
     <Icon>https://raw.githubusercontent.com/ArabCoders/unraid-templates/master/arabcoders/images/watchstate.png</Icon>
     <ExtraParams>--user 99:100</ExtraParams>
-    <DonateText>If you appreciate my work, then please consider donating to children charity.</DonateText>
-    <DonateLink>https://worldwish.org/</DonateLink>
 </Containers>

@@ -12,6 +12,7 @@
     <Category>Tools</Category>
     <GitHub>https://github.com/ArabCoders/watchstate#install</GitHub>
     <ReadMe>https://github.com/ArabCoders/watchstate/blob/master/README.md</ReadMe>
+    <Beta>false</Beta>
     <Branch>
         <Tag>latest</Tag>
         <TagDescription>Stable releases.</TagDescription>

@@ -22,7 +22,7 @@
         Each command has a help documentation attached to it.[br] For more info please visit[br]
         https://github.com/ArabCoders/watchstate/blob/master/FAQ.md[br][br]
     </Description>
-    <Support>https://github.com/ArabCoders/watchstate/discussions</Support>
+    <Support>https://github.com/ArabCoders/watchstate/issues</Support>
     <ReadMe>https://github.com/ArabCoders/watchstate/blob/master/README.md</ReadMe>
     <GitHub>https://github.com/ArabCoders/watchstate</GitHub>
     <Repository>ghcr.io/arabcoders/watchstate</Repository>

@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<Container version="2">
+    <Name>ac-ws-v2-test</Name>
+    <Repository>ghcr.io/arabcoders/watchstate</Repository>
+    <Registry>https://github.com/ArabCoders/watchstate/pkgs/container/watchstate</Registry>
+    <DonateText>If you appreciate my work, then please consider donating to children charity.</DonateText>
+    <DonateLink>https://worldwish.org</DonateLink>
+    <Privileged>false</Privileged>
+    <Network>bridge</Network>
+    <Support>https://github.com/ArabCoders/watchstate/issues/new/choose</Support>
+    <Shell>bash</Shell>
+    <Category>Tools:Utilities</Category>
+    <GitHub>https://github.com/ArabCoders/watchstate#install</GitHub>
+    <ReadMe>https://github.com/ArabCoders/watchstate/blob/master/README.md</ReadMe>
+    <Branch>
+        <Tag>latest</Tag>
+        <TagDescription>Stable releases.</TagDescription>
+    </Branch>
+    <Branch>
+        <Tag>dev</Tag>
+        <TagDescription>Active development version of Watchstate, Things might be broken.</TagDescription>
+        <ReadMe>https://github.com/ArabCoders/watchstate/blob/dev/README.md</ReadMe>
+        <GitHub>https://github.com/ArabCoders/watchstate/tree/dev#install</GitHub>
+    </Branch>
+    <Project>https://github.com/ArabCoders/watchstate</Project>
+    <Overview>Self-hosted service to sync your plex, jellyfin and emby play state. without relying on 3rd-party external
+        services.
+    </Overview>
+    <WebUI>https://[IP]:[PORT:8080]</WebUI>
+    <TemplateURL>
+        https://raw.githubusercontent.com/ArabCoders/unraid-templates/master/arabcoders/watchstate.xml
+    </TemplateURL>
+    <Icon>
+        https://raw.githubusercontent.com/ArabCoders/unraid-templates/master/arabcoders/images/watchstate.png
+    </Icon>
+    <ExtraParams>--user 99:100</ExtraParams>
+    <Config Name="Webhook Port" Target="8080" Default="8080" Mode="tcp" Description="Exposed port for webhook receiver"
+            Type="Port" Display="advanced" Required="true" Mask="false">8080
+    </Config>
+
+    <Config Name="WS_TZ" Target="WS_TZ" Default="UTC"
+            Description="Set Container Timezone"
+            Type="Variable" Display="advanced" Required="false" Mask="false"/>
+
+    <Config Name="WatchState Config Directory" Target="/config"
+            Mode="rw" Description="All application data will be stored in this path"
+            Type="Path" Display="always" Required="true" Mask="false"/>
+
+    <Config Name="WS_CRON_IMPORT" Target="WS_CRON_IMPORT" Default="true|false"
+            Description="Enable or disable importing data from backends"
+            Type="Variable" Display="always" Required="false" Mask="false">false
+    </Config>
+
+    <Config Name="WS_CRON_EXPORT" Target="WS_CRON_IMPORT" Default="true|false"
+            Description="Enable or disable exporting data back to backends"
+            Type="Variable" Display="always" Required="true" Mask="false">false
+    </Config>
+</Container>

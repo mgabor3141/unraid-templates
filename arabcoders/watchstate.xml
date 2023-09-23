@@ -32,7 +32,7 @@
     <Config Name="Webhook Port" Target="8080" Default="8080" Mode="tcp" Description="Exposed port for webhook receiver"
             Type="Port" Display="advanced" Required="true" Mask="false">8080
     </Config>
-    <Config Name="Logs Timezone" Target="WS_TZ" Default="UTC"
+    <Config Name="Timezone" Target="WS_TZ" Default="UTC"
             Description="Set Container Timezone"
             Type="Variable" Display="advanced" Required="false" Mask="false"/>
     <Config Name="WatchState AppData" Target="/config"
@@ -42,7 +42,7 @@
             Description="Enable or disable importing data from backends"
             Type="Variable" Display="always" Required="false" Mask="false">false
     </Config>
-    <Config Name="Export Task" Target="WS_CRON_IMPORT" Default="true|false"
+    <Config Name="Export Task" Target="WS_CRON_EXPORT" Default="true|false"
             Description="Enable or disable exporting data back to backends"
             Type="Variable" Display="always" Required="true" Mask="false">false
     </Config>

@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<Container version="2">
+    <Name>YTPTube</Name>
+    <Repository>ghcr.io/arabcoders/ytptube</Repository>
+    <Registry>https://github.com/ArabCoders/ytptube/pkgs/container/ytptube</Registry>
+    <DonateText>If you appreciate my work, then please consider donating to children charity.</DonateText>
+    <DonateLink>https://worldwish.org</DonateLink>
+    <Privileged>false</Privileged>
+    <Network>bridge</Network>
+    <Support>https://github.com/ArabCoders/ytptube/issues</Support>
+    <Shell>bash</Shell>
+    <Category>Tools</Category>
+    <GitHub>https://github.com/ArabCoders/ytptube#install</GitHub>
+    <ReadMe>https://github.com/ArabCoders/ytptube/blob/master/README.md</ReadMe>
+    <Beta>false</Beta>
+    <Branch>
+        <Tag>latest</Tag>
+        <TagDescription>Stable releases.</TagDescription>
+    </Branch>
+    <Branch>
+        <Tag>dev</Tag>
+        <TagDescription>Active development version of Watchstate, Things might be broken.</TagDescription>
+        <ReadMe>https://github.com/ArabCoders/ytptube/blob/dev/README.md</ReadMe>
+        <GitHub>https://github.com/ArabCoders/ytptube/tree/dev#install</GitHub>
+    </Branch>
+    <Project>https://github.com/ArabCoders/ytptube</Project>
+    <Overview>A Web GUI for yt-dlp</Overview>
+    <WebUI>https://[IP]:[PORT:8081]</WebUI>
+    <TemplateURL>https://raw.githubusercontent.com/ArabCoders/unraid-templates/master/arabcoders/ytptube.xml
+    </TemplateURL>
+    <Icon>https://raw.githubusercontent.com/ArabCoders/unraid-templates/master/arabcoders/images/ytptube.png</Icon>
+    <ExtraParams>--user 99:100</ExtraParams>
+
+    <Config Name="WebGUI Port" Target="8081" Default="8081" Mode="tcp" Description="Exposed port for WebGUI"
+            Type="Port" Display="advanced" Required="true" Mask="false">8081
+    </Config>
+
+    <Config Name="Config Path" Target="YTP_CONFIG_PATH" Default="/config"
+            Mode="rw" Description="All application data will be stored in this path"
+            Type="Path" Display="always" Required="true" Mask="false"/>
+
+    <Config Name="Downloads Path" Target="YTP_DOWNLOAD_PATH" Default="/downloads"
+            Mode="rw" Description="This directory will be used as base for downloads."
+            Type="Path" Display="always" Required="true" Mask="false"/>
+
+    <Config Name="Temp Path" Target="YTP_TEMP_PATH" Default="/tmp" Mode="rw"
+            Description="Temporary directory for downloads and metadata. Should be on a fast disk or RAM disk."
+            Type="Path" Display="advanced" Required="true" Mask="false"/>
+
+    <Config Name="Timezone" Target="TZ" Default="UTC"
+            Description="Set Container Timezone. e.g. America/New_York, UTC"
+            Type="Variable" Display="advanced" Required="false" Mask="false"/>
+
+    <Config Name="Keep Archive" Target="YTP_KEEP_ARCHIVE" Default="true|false"
+            Description="Whether to allow re-downloading of already downloaded files."
+            Type="Variable" Display="always" Required="true" Mask="false">false
+    </Config>
+</Container>

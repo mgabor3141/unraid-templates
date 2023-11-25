@@ -32,12 +32,14 @@
     <Config Name="Webhook Port" Target="8080" Default="8080" Mode="tcp" Description="Exposed port for webhook receiver"
             Type="Port" Display="advanced" Required="true" Mask="false">8080
     </Config>
-    <Config Name="Timezone" Target="WS_TZ" Default="UTC"
+    <Config Name="Logs Timezone" Target="WS_TZ" Default="UTC"
             Description="Set Container Timezone"
             Type="Variable" Display="advanced" Required="false" Mask="false"/>
-    <Config Name="WatchState AppData" Target="/config"
+
+    <Config Name="WatchState AppData" Target="WS_DATA_PATH" Default="/config"
             Mode="rw" Description="All application data will be stored in this path"
             Type="Path" Display="always" Required="true" Mask="false"/>
+
     <Config Name="Import Task" Target="WS_CRON_IMPORT" Default="true|false"
             Description="Enable or disable importing data from backends"
             Type="Variable" Display="always" Required="false" Mask="false">false

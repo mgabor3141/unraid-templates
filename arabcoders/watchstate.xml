@@ -36,7 +36,7 @@
             Description="Set Container Timezone"
             Type="Variable" Display="advanced" Required="false" Mask="false"/>
 
-    <Config Name="WatchState AppData" Target="WS_DATA_PATH" Default="/config"
+    <Config Name="WatchState AppData" Target="/config" Default="/config"
             Mode="rw" Description="All application data will be stored in this path"
             Type="Path" Display="always" Required="true" Mask="false"/>
 

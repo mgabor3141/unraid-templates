@@ -35,15 +35,15 @@
             Type="Port" Display="advanced" Required="true" Mask="false">8081
     </Config>
 
-    <Config Name="Config Path" Target="YTP_CONFIG_PATH" Default="/config"
+    <Config Name="Config Path" Target="/config" Default="/config"
             Mode="rw" Description="All application data will be stored in this path"
             Type="Path" Display="always" Required="true" Mask="false"/>
 
-    <Config Name="Downloads Path" Target="YTP_DOWNLOAD_PATH" Default="/downloads"
+    <Config Name="Downloads Path" Target="/downloads" Default="/downloads"
             Mode="rw" Description="This directory will be used as base for downloads."
             Type="Path" Display="always" Required="true" Mask="false"/>
 
-    <Config Name="Temp Path" Target="YTP_TEMP_PATH" Default="/tmp" Mode="rw"
+    <Config Name="Temp Path" Target="/tmp" Default="/tmp" Mode="rw"
             Description="Temporary directory for downloads and metadata. Should be on a fast disk or RAM disk."
             Type="Path" Display="advanced" Required="true" Mask="false"/>
 

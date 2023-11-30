@@ -15,11 +15,11 @@
     <Beta>false</Beta>
     <Branch>
         <Tag>latest</Tag>
-        <TagDescription>Stable releases.</TagDescription>
+        <TagDescription>Stable release.</TagDescription>
     </Branch>
     <Branch>
         <Tag>dev</Tag>
-        <TagDescription>Active development version of Watchstate, Things might be broken.</TagDescription>
+        <TagDescription>Active development version of YTPTube, Things might be broken.</TagDescription>
         <ReadMe>https://github.com/ArabCoders/ytptube/blob/dev/README.md</ReadMe>
         <GitHub>https://github.com/ArabCoders/ytptube/tree/dev#install</GitHub>
     </Branch>

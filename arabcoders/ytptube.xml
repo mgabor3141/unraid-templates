@@ -2,16 +2,16 @@
 <Container version="2">
     <Name>YTPTube</Name>
     <Repository>ghcr.io/arabcoders/ytptube</Repository>
-    <Registry>https://github.com/ArabCoders/ytptube/pkgs/container/ytptube</Registry>
+    <Registry>https://github.com/arabcoders/ytptube/pkgs/container/ytptube</Registry>
     <DonateText>If you appreciate my work, then please consider donating to children charity.</DonateText>
     <DonateLink>https://worldwish.org</DonateLink>
     <Privileged>false</Privileged>
     <Network>bridge</Network>
-    <Support>https://github.com/ArabCoders/ytptube/issues</Support>
+    <Support>https://github.com/arabcoders/ytptube/issues</Support>
     <Shell>bash</Shell>
     <Category>Tools</Category>
-    <GitHub>https://github.com/ArabCoders/ytptube#install</GitHub>
-    <ReadMe>https://github.com/ArabCoders/ytptube/blob/master/README.md</ReadMe>
+    <GitHub>https://github.com/arabcoders/ytptube#install</GitHub>
+    <ReadMe>https://github.com/arabcoders/ytptube/blob/master/README.md</ReadMe>
     <Beta>false</Beta>
     <Branch>
         <Tag>latest</Tag>
@@ -20,15 +20,15 @@
     <Branch>
         <Tag>dev</Tag>
         <TagDescription>Active development version of YTPTube, Things might be broken.</TagDescription>
-        <ReadMe>https://github.com/ArabCoders/ytptube/blob/dev/README.md</ReadMe>
-        <GitHub>https://github.com/ArabCoders/ytptube/tree/dev#install</GitHub>
+        <ReadMe>https://github.com/arabcoders/ytptube/blob/dev/README.md</ReadMe>
+        <GitHub>https://github.com/arabcoders/ytptube/tree/dev#install</GitHub>
     </Branch>
-    <Project>https://github.com/ArabCoders/ytptube</Project>
+    <Project>https://github.com/arabcoders/ytptube</Project>
     <Overview>A Web GUI for yt-dlp</Overview>
     <WebUI>https://[IP]:[PORT:8081]</WebUI>
-    <TemplateURL>https://raw.githubusercontent.com/ArabCoders/unraid-templates/master/arabcoders/ytptube.xml
+    <TemplateURL>https://raw.githubusercontent.com/arabcoders/unraid-templates/master/arabcoders/ytptube.xml
     </TemplateURL>
-    <Icon>https://raw.githubusercontent.com/ArabCoders/unraid-templates/master/arabcoders/images/ytptube.png</Icon>
+    <Icon>https://raw.githubusercontent.com/arabcoders/unraid-templates/master/arabcoders/images/ytptube.png</Icon>
     <ExtraParams>--user 99:100</ExtraParams>
 
     <Config Name="WebGUI Port" Target="8081" Default="8081" Mode="tcp" Description="Exposed port for WebGUI"

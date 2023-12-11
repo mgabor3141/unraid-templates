@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
-    <Name>YTPTube</Name>
+    <Name>ytptube</Name>
     <Repository>ghcr.io/arabcoders/ytptube</Repository>
     <Registry>https://github.com/arabcoders/ytptube/pkgs/container/ytptube</Registry>
     <DonateText>If you appreciate my work, then please consider donating to children charity.</DonateText>

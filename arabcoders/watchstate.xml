@@ -24,28 +24,20 @@
         <GitHub>https://github.com/arabcoders/watchstate/tree/dev#install</GitHub>
     </Branch>
     <Project>https://github.com/arabcoders/watchstate</Project>
-    <Overview>Self-hosted service to sync your plex, jellyfin and emby play state. without relying on 3rd-party external services.</Overview>
+    <Overview>Self-hosted service to sync your plex, jellyfin and emby play state. without relying on 3rd-party external
+        services.
+    </Overview>
     <WebUI>https://[IP]:[PORT:8080]</WebUI>
-    <TemplateURL>https://raw.githubusercontent.com/arabcoders/unraid-templates/master/arabcoders/watchstate.xml</TemplateURL>
-    <Icon>https://raw.githubusercontent.com/arabcoders/unraid-templates/master/arabcoders/images/watchstate.png</Icon>
+    <TemplateURL>https://raw.githubusercontent.com/arabcoders/unraid-templates/master/arabcoders/watchstate.xml
+    </TemplateURL>
+    <Icon>https://raw.githubusercontent.com/arabcoders/watchstate/master/frontend/public/favicon.ico</Icon>
     <ExtraParams>--user 99:100</ExtraParams>
-    <Config Name="Webhook Port" Target="8080" Default="8080" Mode="tcp" Description="Exposed port for webhook receiver"
+    <Config Name="HTTP Port" Target="8080" Default="8080" Mode="tcp"
+            Description="The HTTP Port for WebUI and API access"
             Type="Port" Display="advanced" Required="true" Mask="false">8080
     </Config>
-    <Config Name="Logs Timezone" Target="WS_TZ" Default="UTC"
-            Description="Set Container Timezone"
-            Type="Variable" Display="advanced" Required="false" Mask="false"/>
-
     <Config Name="WatchState AppData" Target="/config" Default="/config"
             Mode="rw" Description="All application data will be stored in this path"
             Type="Path" Display="always" Required="true" Mask="false"/>
 
-    <Config Name="Import Task" Target="WS_CRON_IMPORT" Default="true|false"
-            Description="Enable or disable importing data from backends"
-            Type="Variable" Display="always" Required="false" Mask="false">false
-    </Config>
-    <Config Name="Export Task" Target="WS_CRON_EXPORT" Default="true|false"
-            Description="Enable or disable exporting data back to backends"
-            Type="Variable" Display="always" Required="true" Mask="false">false
-    </Config>
 </Container>

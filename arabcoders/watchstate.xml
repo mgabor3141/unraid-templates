@@ -27,7 +27,7 @@
     <Overview>Self-hosted service to sync your plex, jellyfin and emby play state. without relying on 3rd-party external
         services.
     </Overview>
-    <WebUI>https://[IP]:[PORT:8080]</WebUI>
+    <WebUI>http://[IP]:[PORT:8080]</WebUI>
     <TemplateURL>https://raw.githubusercontent.com/arabcoders/unraid-templates/master/arabcoders/watchstate.xml
     </TemplateURL>
     <Icon>https://raw.githubusercontent.com/arabcoders/watchstate/master/frontend/public/favicon.ico</Icon>
